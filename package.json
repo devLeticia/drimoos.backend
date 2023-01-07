@@ -1,0 +1,32 @@
+{
+  "name": "drimoos.backend",
+  "version": "1.0.0",
+  "description": "Drimoos API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devLeticia/drimoos.backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devLeticia/drimoos.backend/issues"
+  },
+  "homepage": "https://github.com/devLeticia/drimoos.backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "config": "^3.3.8",
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "joi": "^17.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.8.2",
+    "morgan": "^1.10.0"
+  }
+}
