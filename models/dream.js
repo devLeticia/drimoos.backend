@@ -4,7 +4,7 @@ const Joi = require('joi');
 const mongoose = require('mongoose');
 //String, Number, Date, Buffer, Boolean, ObjectID, Array
 const dreamSchema = new mongoose.Schema({
-    userId: Number,
+    userId: String,
     happenedAt: {type: Date, default:Date.now},
     createdAt: {type: Date, default:Date.now},
     editedAt: {type: Date, default:Date.now},

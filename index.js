@@ -14,6 +14,7 @@ const dreams = require('./routes/dreams')
 const users = require('./routes/users')
 const auth = require('./routes/auth')
 const mongoose = require('mongoose');
+require('./startup/prod')(app);
 
 
 //knowing your enviroment - production or development
@@ -24,7 +25,7 @@ const mongoose = require('mongoose');
 app.use(express.json()); // middleware to use in the request process pipeline, if there is a json body in the request, it will set a req.body property
 //app.use(express.urlencoded());// parses incoming request with urlencoded payload key-value&key=value - we dont use it that often, its not modern
 //app.use(express.static('public')); // all static assets inside this folder, are served from the root of the site  
-app.use(helmet());//helmet - good for headers, you have to install it
+app.use(helmet());//helmet - good for headers, you have to install it. good for 
 app.use('/api/dreams', dreams); // for any route that start with .. use the dreams file
 app.use('/', home)
 app.use('/api/users', users);
@@ -125,7 +126,7 @@ async function updateDream(id) {
 
 
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 9000
 app.listen(port, () => console.log(`listening on port ${port}`));
 mongoose.set("strictQuery", true); //ver depois como resolver isso
 mongoose.connect('mongodb://localhost/drimoos')
