@@ -1,7 +1,6 @@
-const config = require('config')
-const jwt = require('jsonwebtoken');
-const Joi = require('joi');
-const mongoose = require('mongoose');
+import Joi from 'joi'
+import mongoose from 'mongoose'
+
 //String, Number, Date, Buffer, Boolean, ObjectID, Array
 const dreamSchema = new mongoose.Schema({
     userId: String,
@@ -53,5 +52,4 @@ function validateDream(dream) { // all the valiudation logic in one placce
     return schema.validate(dream, {allowUnknown:true}); // se nao vou validar uma das partes, incluir o allowUnknown:true
 };
 
-exports.Dream = Dream;
-exports.validateDream = validateDream
+export {Dream, validateDream}

@@ -1,3 +1,4 @@
 {
-    "jwtPrivateKey": "drimoos_jwtPrivateKey"
+    "jwtPrivateKey": "drimoos_jwtPrivateKey",
+    "db": "mongodb://localhost/drimoos_tests"
 }

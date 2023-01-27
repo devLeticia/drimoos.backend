@@ -1,9 +1,10 @@
-const auth = require('../middleware/auth')
-const admin = require('../middleware/admin')
-const express = require('express');
-const Joi = require('joi');
+import auth from '../middleware/auth.js'
+import admin from '../middleware/admin.js'
+import express from 'express'
+import { Dream, validateDream} from '../models/dream.js'
+
 const router = express.Router();
-const {Dream, validateDream} = require('../models/dream');
+
 
 
 router.get('/', (req, res) => {
@@ -73,4 +74,4 @@ router.delete('/:id', [auth, admin], async  (req, res) => { // auth middleware m
 
 
 
-module.exports = router;
+export default router

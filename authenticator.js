@@ -3,7 +3,7 @@ function authenticatior (req, res, next) {
     next();
 }
 
-module.exports = authenticatior;
+export default authenticatior;
 
 
 // unit tests x integration tests -> 

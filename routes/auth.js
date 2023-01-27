@@ -1,8 +1,9 @@
-const {User} =  require('../models/user');
-const Joi = require('joi');
-const bcrypt = require('bcrypt');
-const mongoose = require('mongoose');
-const express  = require('express');
+import {User} from '../models/user.js'
+import Joi from 'joi'
+import bcrypt from 'bcrypt'
+import mongoose from 'mongoose'
+import express from 'express'
+
 const router = express.Router();
 
 //endpoint para authenticar o usuario (login) - verificaar que o email e senha dele estao corretos
@@ -41,4 +42,4 @@ function validate(req) {
 }
 
 
-module.exports = router;
+export default router;

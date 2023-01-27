@@ -1,4 +1,5 @@
 {
     "name": "Drimoos - dream app",
-    "jwtPrivateKey": ""
+    "jwtPrivateKey": "",
+    "db": "mongodb://localhost/drimoos"
 }

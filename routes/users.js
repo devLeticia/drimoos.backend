@@ -1,10 +1,10 @@
+import auth from '../middleware/auth.js'
+import _ from 'lodash'
+import bcrypt  from 'bcrypt'
+import {User, validateUser} from '../models/user.js'
+import mongoose from 'mongoose'
+import express from 'express'
 
-const auth = require('../middleware/auth')
-const _ = require('lodash');
-const bcrypt = require('bcrypt');
-const {User, validate} = require('../models/user');
-const mongoose = require('mongoose');
-const express  = require('express');
 const router = express.Router();
 
 
@@ -40,4 +40,4 @@ router.post('/', async(req, res) => {
 })
 //logout must be implemented on the cliente by deleting the token -> do never store the token on the database!
 // if you need to store the token, encrypt it before
-module.exports = router;
+export default router;
